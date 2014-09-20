@@ -70,20 +70,23 @@
 <div data-role="collapsible">
 <h3>Details</h3>
 
-<div data-role="collapsible">
-        <h3>Data type</h3>
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+<legend>Data type</legend>
         <i>The type of data is what you want scaled. Steps, time, or weight.</i>
-        
-	<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
     	<input name="key3" id="key3-0" data-type="int" value="0" checked="checked" type="radio">
-        <label for="key3-0">Steps</label>
+        <label for="key3-0">Steps (will register you for walking/running accelerometer event)</label>
         <input name="key3" id="key3-1" data-type="int" value="1" type="radio">
         <label for="key3-1">Time</label>
         <input name="key3" id="key3-2" data-type="int" value="2" type="radio">
         <label for="key3-2">Weight</label>
 </fieldset>
-	
-</div>
+
+<fieldset data-role="controlgroup" data-mini="true">
+ <legend><h4>Goal</h4></legend>
+    <div class="ui-field-contain">
+      <input name="key2" id="name" placeholder="Enter custom slot text" value="100" data-mini="true" type="text" maxlength="17">
+    </div>
+</fieldset>
 
 <fieldset data-role="controlgroup" data-mini="true">
  <legend><h4>Activity Name</h4></legend>

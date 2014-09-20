@@ -86,18 +86,28 @@
 </div>
 
 <fieldset data-role="controlgroup" data-mini="true">
- <legend><h4>Class Code/Room</h4></legend>
+ <legend><h4>Activity Name</h4></legend>
     <div class="ui-field-contain">
-      <input name="key2" id="code" placeholder="Enter custom slot text" value="Room 1337" data-mini="true" type="text" maxlength="10">
+      <input name="key2" id="name" placeholder="Enter custom slot text" value="Running" data-mini="true" type="text" maxlength="10">
+    </div>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+ <legend><h4>Other info</h4></legend>
+    <div class="ui-field-contain">
+      <input name="key2" id="name" placeholder="Enter custom slot text" value="Enter extra info..." data-mini="true" type="text" maxlength="17">
     </div>
 </fieldset>
 
 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Class Type</legend>
+    <legend>Accelerometer</legend>
+    <b>Are you running? Other activity? Use this below checkbox to register your activity for a certain
+    	accelerometer event. Running will track steps. More to come soon
+    </b>
     	<input name="key3" id="key3-1" data-type="int" value="1" checked="checked" type="radio">
-        <label for="key3-1">Lecture</label>
+        <label for="key3-1">Running</label>
         <input name="key3" id="key3-0" data-type="int" value="0" type="radio">
-        <label for="key3-0">Lab</label>
+        <label for="key3-0">Other</label>
 </fieldset>
 
 </div>

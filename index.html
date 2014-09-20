@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="main">
+      <div data-role="header" class="jqm-header">
+        <h1>Class Schedules</h1>
+      </div>
+
+      <div data-role="content">
+
+<div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-mini="false">
+
+<div data-role="collapsible">
+        <h3>Instructions</h3>
+<b>To sync a class:</b><br>
+1. Check what class out of 6 it is, (ie. class 2/6) in the "class number" section. This number will accordingly insert the
+class into that slot on the watch.<br>
+2. Insert all of the details in the class in the "details" section<br>
+3. Send data to pebble<br>
+<i>The app will figure out on its own what class is next for you.</i><br><br>
+
+<b>Made a mistake? The settings page remembers the last synced class for you to edit again, and again, and again.</b>
+</div>
+
+<div data-role="collapsible">
+<h3>Class Number</h3>
+
+<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+    <legend>#</legend>
+    	<input name="key0" id="key0-1" data-type="int" value="1" checked="checked" type="radio">
+        <label for="key0-1">Class 1/6</label>
+        <input name="key0" id="key0-2" data-type="int" value="2" type="radio">
+        <label for="key0-2">Class 2/6</label>
+        <input name="key0" id="key0-3" data-type="int" value="3" type="radio">
+        <label for="key0-3">Class 3/6</label>
+        <input name="key0" id="key0-4" data-type="int" value="4" type="radio">
+        <label for="key0-4">Class 4/6</label>
+        <input name="key0" id="key0-5" data-type="int" value="5" type="radio">
+        <label for="key0-5">Class 5/6</label>
+        <input name="key0" id="key0-6" data-type="int" value="6" type="radio">
+        <label for="key0-6">Class 6/6</label>
+</fieldset>
+
+</div>
+
+<div data-role="collapsible">
+<h3>Details</h3>
+
+<div data-role="collapsible">
+        <h3>Time</h3>
+        
+        <i>Please follow the folling format: [hr].[min]. ie. 4:30 PM would be 16.30 (has to be 24 hour) or 8:23 AM would
+        	be 8.23
+        </i>
+
+	<div data-role="collapsible">
+	        <h3>Monday</h3>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>Start Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key5" id="start_mon" placeholder="Enter custom slot text" value="14.30" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>End Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key6" id="end_mon" placeholder="Enter custom slot text" value="15.45" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	</div>
+	
+	<div data-role="collapsible">
+	        <h3>Tuesday</h3>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>Start Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key7" id="start_tue" placeholder="Enter custom slot text" value="0.00" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>End Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key8" id="end_tue" placeholder="Enter custom slot text" value="0.00" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	</div>
+	
+	<div data-role="collapsible">
+	        <h3>Wednesday</h3>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>Start Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key9" id="start_wed" placeholder="Enter custom slot text" value="0.00" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>End Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key10" id="end_wed" placeholder="Enter custom slot text" value="0.00" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	</div>
+	
+	<div data-role="collapsible">
+	        <h3>Thursday</h3>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>Start Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key11" id="start_thu" placeholder="Enter custom slot text" value="0.00" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>End Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key12" id="end_thu" placeholder="Enter custom slot text" value="0.00" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	</div>
+	
+	<div data-role="collapsible">
+	        <h3>Friday</h3>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>Start Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key13" id="start_fri" placeholder="Enter custom slot text" value="0.00" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	
+	<fieldset data-role="controlgroup" data-mini="true">
+	 <legend><h4>End Time</h4></legend>
+	    <div class="ui-field-contain">
+	      <input name="key14" id="end_fri" placeholder="Enter custom slot text" value="0.00" data-mini="true" type="text" maxlength="21">
+	    </div>
+	</fieldset>
+	</div>
+</div>
+
+<fieldset data-role="controlgroup" data-mini="true">
+ <legend><h4>Professor</h4></legend>
+    <div class="ui-field-contain">
+      <input name="key1" id="prof" placeholder="Enter custom slot text" value="Mr. Quosai" data-mini="true" type="text" maxlength="21">
+    </div>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+ <legend><h4>Class Code/Room</h4></legend>
+    <div class="ui-field-contain">
+      <input name="key2" id="code" placeholder="Enter custom slot text" value="Room 1337" data-mini="true" type="text" maxlength="10">
+    </div>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-mini="true">
+ <legend><h4>Name</h4></legend>
+    <div class="ui-field-contain">
+      <input name="key4" id="name" placeholder="Enter custom slot text" value="Computer Sciences" data-mini="true" type="text" maxlength="30">
+    </div>
+</fieldset>
+
+<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+    <legend>Class Type</legend>
+    	<input name="key3" id="key3-1" data-type="int" value="1" checked="checked" type="radio">
+        <label for="key3-1">Lecture</label>
+        <input name="key3" id="key3-0" data-type="int" value="0" type="radio">
+        <label for="key3-0">Lab</label>
+</fieldset>
+
+</div>
+
+    <div data-role="collapsible">
+        <h3>Information and Support</h3>
+<p>Newest app version: 0.3-internal<br><br>
+Website version: 0.3<br><br>
+<b>Credits:</b><br>
+Edwin Finch - Developer<br>
+
+www.edwinfinch.com/pebble/ see all my projects<br><br>
+   
+Philipp Weder (iPhibse) - Design & Graphics<br>
+
+www.iPhibse.ch <br><br>
+
+<b><i>SUPPORT</i></b><br>
+<p>Please contact <b>contact@edwinfinch.com</b> if you need any technical support, want to
+	report a bug that you are experiencing, or suggest a feature. I will get back to you 
+	within a day (most likely) and try to fix you ASAP.
+	<br><br>
+	If you want to see the rest of my software, go to www.edwinfinch.com/pebble/.
+	<br><br>
+	If you want to be a beta tester for this app or any other software of mine,
+	join the Google+ community by going to the link: http://bit.ly/edwinsbetas
+</p>
+</p>
+
+</p>
+</fieldset>
+    </div>
+</div>
+<br />
+        <div class="ui-body ui-body-c">
+          <fieldset class="ui-grid-a">
+              <div class="ui-block-a"><button type="submit" data-theme="d" id="b-cancel">Cancel</button></div>
+              <div class="ui-block-b"><button type="submit" data-theme="a" id="b-submit">Save</button></div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <script>
+      function saveOptions() {
+        var options = {
+          'number':     Number( $("input[name=key0]:checked").val() ),	
+          'prof':     $("input[name=key1]").val(),
+          'code':     $("input[name=key2]").val(),
+          'type':     Number( $("input[name=key3]:checked").val() ),
+          'start_mon':     $("input[name=key5]").val(),
+          'end_mon':     $("input[name=key6]").val(),
+          'name':     $("input[name=key4]").val(),
+          'start_tue':     $("input[name=key7]").val(),
+          'end_tue':     $("input[name=key8]").val(),
+          'start_wed':     $("input[name=key9]").val(),
+          'end_wed':     $("input[name=key10]").val(),
+          'start_thu':     $("input[name=key11]").val(),
+          'end_thu':     $("input[name=key12]").val(),
+          'start_fri':     $("input[name=key13]").val(),
+          'end_fri':     $("input[name=key14]").val(),
+        }
+        return options;
+      }
+
+      $().ready(function() {
+       if (typeof window.localStorage !== "undefined") {
+       	console.log("Not undefined :)");
+        if (window.localStorage.class_settings) {
+          ls_pto = JSON.parse(window.localStorage.class_settings);
+          $("input[name=key0][id=key3-"+ls_pto["number"]+"]").prop('checked',true);
+          $("input[name=key0]").checkboxradio('refresh');
+          $("input[name=key1]").val(ls_pto["prof"]);
+          $("input[name=key2]").val(ls_pto["code"]);
+          $("input[name=key3][id=key3-"+ls_pto["type"]+"]").prop('checked',true);
+          $("input[name=key3]").checkboxradio('refresh');
+          $("input[name=key5]").val(ls_pto["start_mon"]);
+          $("input[name=key6]").val(ls_pto["end_mon"]);
+          $("input[name=key4]").val(ls_pto["name"]);
+          $("input[name=key7]").val(ls_pto["start_tue"]);
+          $("input[name=key8]").val(ls_pto["end_tue"]);
+          $("input[name=key9]").val(ls_pto["start_wed"]);
+          $("input[name=key10]").val(ls_pto["end_wed"]);
+          $("input[name=key11]").val(ls_pto["start_thu"]);
+          $("input[name=key12]").val(ls_pto["end_thu"]);
+          $("input[name=key13]").val(ls_pto["start_fri"]);
+          $("input[name=key14]").val(ls_pto["end_fri"]);
+        }
+       }
+        $("#b-cancel").click(function() {
+          console.log("Cancel");
+          document.location = "pebblejs://close";
+        });
+
+        $("#b-submit").click(function() {
+          console.log("Submit");
+
+          ls_pto = JSON.stringify(saveOptions());
+          if (typeof window.localStorage !== "undefined") {
+            window.localStorage.class_settings = ls_pto;
+          }
+          var location = "pebblejs://close#" + ls_pto;
+          console.log("Warping to: " + location);
+          console.log(location);
+          document.location = location;
+        });
+
+      });
+    </script>
+  </body>
+</html>

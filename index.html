@@ -100,17 +100,9 @@
 
 <fieldset data-role="controlgroup" data-mini="true">
  <legend><h4>Goal</h4></legend>
- <i>The goal amount will correlate with the type of data you're using. ie. Steps</i>
+ <i>The goal amount will correlate with the <b>ABOVE</b>type of data you're using. ie. Steps, Minutes, etc.</i>
     <div class="ui-field-contain">
       <input type="number" name="key4" id="goal" onkeypress="return isNumberKey(event)" placeholder="Numbers only" value="100" data-mini="true" type="text" maxlength="17">
-    </div>
-</fieldset>
-
-<fieldset data-role="controlgroup" data-mini="true">
- <legend><h4>Length</h4></legend>
- <i>How long do you want to do this activity for? In minutes, please.</i>
-    <div class="ui-field-contain">
-      <input type="number" name="key5" id="goal" onkeypress="return isNumberKey(event)" placeholder="Numbers only" value="15" data-mini="true" type="text" maxlength="17">
     </div>
 </fieldset>
 
@@ -126,17 +118,6 @@
     <div class="ui-field-contain">
       <input name="key3" id="other" placeholder="Enter custom slot text" value="Enter extra info..." data-mini="true" type="text" maxlength="17">
     </div>
-</fieldset>
-
-<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-    <legend>Accelerometer</legend>
-    <b>Are you running? Other activity? Use this below checkbox to register your activity for a certain
-    	accelerometer event. Running will track steps. More to come soon
-    </b>
-    	<input name="key6" id="key6-1" data-type="int" value="1" checked="checked" type="radio">
-        <label for="key6-1">Running</label>
-        <input name="key6" id="key6-0" data-type="int" value="0" type="radio">
-        <label for="key6-0">Other</label>
 </fieldset>
 
 </div>
@@ -161,7 +142,6 @@
           'goal':     Number($("input[name=key4]").val()),
           'length':     Number($("input[name=key5]").val()),
           'enabled':     Number($("input[name=key7]").val()),
-          'accelservice':     Number($("input[name=key7]").val()),
         }
         return options;
       }

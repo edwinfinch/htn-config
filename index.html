@@ -136,12 +136,11 @@
       function saveOptions() {
         var options = {
           'number':     Number( $("input[name=key0]:checked").val() ),	
-          'type':     Number($("input[name=key1]").val() ),
+          'type':     Number($("input[name=key1]:checked").val() ),
           'name':     $("input[name=key2]").val(),
           'other':     $("input[name=key3]").val(),
           'goal':     Number($("input[name=key4]").val()),
-          'length':     Number($("input[name=key5]").val()),
-          'enabled':     Number($("input[name=key7]").val()),
+          'enabled':     Number($("input[name=key7]:checked").val()),
         }
         return options;
       }
